@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mohan" translate="label" sortOrder="500">
+            <label>Mohan</label>
+        </tab>
+        <section id="guestordertocustomer" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Guest Order to Customer</label>
+            <tab>mohan</tab>
+            <resource>Mohan_GuestOrderToCustomer::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[This module maps a guest order to a customer account, if a customer account exists with the same email ID as the guest order that was placed.<br/><br/>To use this module, click the <strong>"Map to Customer"</strong> button in the header of the order details page.]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

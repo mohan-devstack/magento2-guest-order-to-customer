@@ -1,0 +1,44 @@
+{
+    "name": "mohan-devstack/magento2-guest-order-to-customer",
+    "description": "Map Magento 2 guest orders to an existing customer account with the same email, from a \"Map to Customer\" button on the admin order view page.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Mohan Prabhu",
+            "email": "mohandevstack@gmail.com",
+            "homepage": "https://github.com/mohan-prabhu",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "magento2",
+        "magento",
+        "guest-order",
+        "customer",
+        "order-assignment",
+        "admin"
+    ],
+    "require": {
+        "php": "~8.1.0||~8.2.0||~8.3.0||~8.4.0||~8.5.0",
+        "magento/framework": "^103.0",
+        "magento/module-backend": "^102.0",
+        "magento/module-config": "^101.2",
+        "magento/module-customer": "^103.0",
+        "magento/module-sales": "^103.0",
+        "magento/module-store": "^101.1",
+        "magento/module-ui": "^101.2"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Mohan\\GuestOrderToCustomer\\": ""
+        }
+    }
+}
